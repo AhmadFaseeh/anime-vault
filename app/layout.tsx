@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
 
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={dmSans.className}>
         <main className="max-w-7xl mx-auto bg-[#0F1117]">
           <Hero />
+           <Analytics />
           {children}
           <Footer />
         </main>
